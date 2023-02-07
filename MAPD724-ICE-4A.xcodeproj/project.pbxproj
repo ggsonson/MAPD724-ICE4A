@@ -28,6 +28,10 @@
 		24E6CEFC2991C64200F3FF91 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6CEF82991C64100F3FF91 /* Cloud.swift */; };
 		24E6CEFD2991C64200F3FF91 /* Ocean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6CEF92991C64100F3FF91 /* Ocean.swift */; };
 		24E6CEFE2991C64200F3FF91 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6CEFA2991C64100F3FF91 /* Player.swift */; };
+		24E6CF012991C99E00F3FF91 /* StartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 24E6CF002991C99E00F3FF91 /* StartScene.sks */; };
+		24E6CF032991CA0A00F3FF91 /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6CF022991CA0A00F3FF91 /* StartScene.swift */; };
+		24E6CF052991CF4800F3FF91 /* EndScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 24E6CF042991CF4800F3FF91 /* EndScene.sks */; };
+		24E6CF072991CF6100F3FF91 /* EndScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6CF062991CF6100F3FF91 /* EndScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +57,10 @@
 		24E6CEF82991C64100F3FF91 /* Cloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 		24E6CEF92991C64100F3FF91 /* Ocean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ocean.swift; sourceTree = "<group>"; };
 		24E6CEFA2991C64100F3FF91 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		24E6CF002991C99E00F3FF91 /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
+		24E6CF022991CA0A00F3FF91 /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
+		24E6CF042991CF4800F3FF91 /* EndScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EndScene.sks; sourceTree = "<group>"; };
+		24E6CF062991CF6100F3FF91 /* EndScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,14 +93,13 @@
 		24E6CEC32991C5F600F3FF91 /* MAPD724-ICE-4A */ = {
 			isa = PBXGroup;
 			children = (
+				24E6CEFF2991C8D700F3FF91 /* Scenes */,
 				24E6CEF62991C64100F3FF91 /* GameObjects */,
 				24E6CEF12991C63600F3FF91 /* Managers */,
 				24E6CEE52991C62300F3FF91 /* Core */,
 				24E6CEDB2991C61A00F3FF91 /* Assets */,
 				24E6CEC42991C5F600F3FF91 /* AppDelegate.swift */,
-				24E6CEC62991C5F600F3FF91 /* GameScene.sks */,
 				24E6CEC82991C5F600F3FF91 /* Actions.sks */,
-				24E6CECA2991C5F600F3FF91 /* GameScene.swift */,
 				24E6CECC2991C5F600F3FF91 /* GameViewController.swift */,
 				24E6CECE2991C5F600F3FF91 /* Main.storyboard */,
 				24E6CED12991C5F600F3FF91 /* Assets.xcassets */,
@@ -148,6 +155,19 @@
 				24E6CEFA2991C64100F3FF91 /* Player.swift */,
 			);
 			path = GameObjects;
+			sourceTree = "<group>";
+		};
+		24E6CEFF2991C8D700F3FF91 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				24E6CEC62991C5F600F3FF91 /* GameScene.sks */,
+				24E6CECA2991C5F600F3FF91 /* GameScene.swift */,
+				24E6CF002991C99E00F3FF91 /* StartScene.sks */,
+				24E6CF022991CA0A00F3FF91 /* StartScene.swift */,
+				24E6CF042991CF4800F3FF91 /* EndScene.sks */,
+				24E6CF062991CF6100F3FF91 /* EndScene.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,12 +231,14 @@
 				24E6CEE42991C61A00F3FF91 /* yay.mp3 in Resources */,
 				24E6CED02991C5F600F3FF91 /* Main.storyboard in Resources */,
 				24E6CEC72991C5F600F3FF91 /* GameScene.sks in Resources */,
+				24E6CF012991C99E00F3FF91 /* StartScene.sks in Resources */,
 				24E6CED22991C5F600F3FF91 /* Assets.xcassets in Resources */,
 				24E6CEE32991C61A00F3FF91 /* thunder.mp3 in Resources */,
 				24E6CEE12991C61A00F3FF91 /* yay.ogg in Resources */,
 				24E6CED52991C5F600F3FF91 /* LaunchScreen.storyboard in Resources */,
 				24E6CEE22991C61A00F3FF91 /* engine.ogg in Resources */,
 				24E6CEC92991C5F600F3FF91 /* Actions.sks in Resources */,
+				24E6CF052991CF4800F3FF91 /* EndScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +257,8 @@
 				24E6CEF42991C63600F3FF91 /* ScoreManager.swift in Sources */,
 				24E6CEFC2991C64200F3FF91 /* Cloud.swift in Sources */,
 				24E6CECD2991C5F600F3FF91 /* GameViewController.swift in Sources */,
+				24E6CF072991CF6100F3FF91 /* EndScene.swift in Sources */,
+				24E6CF032991CA0A00F3FF91 /* StartScene.swift in Sources */,
 				24E6CEEB2991C62300F3FF91 /* Layer.swift in Sources */,
 				24E6CEC52991C5F600F3FF91 /* AppDelegate.swift in Sources */,
 				24E6CEEA2991C62300F3FF91 /* GameObject.swift in Sources */,
