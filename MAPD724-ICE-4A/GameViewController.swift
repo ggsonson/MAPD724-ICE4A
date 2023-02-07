@@ -11,21 +11,18 @@ import GameplayKit
 
 class GameViewController: UIViewController {
     
-    @IBOutlet var LivesLabel: UILabel?
-    @IBOutlet var ScoreLabel: UILabel?
+    @IBOutlet var LivesLabel: UILabel!
+    @IBOutlet var ScoreLabel: UILabel!
     
+    @IBOutlet weak var StartLabel: UILabel!
+    @IBOutlet weak var StartButton: UIButton!
     var currentScene: GKScene?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setScene(sceneName: "EndScene")
+        presentStartScene()
         
-        CollisionManager.gameViewController = self
-        ScoreManager.Score = 0
-        ScoreManager.Lives = 5
-        updateLivesLabel()
-        updateScoreLabel()
         
     }
     
@@ -63,5 +60,31 @@ class GameViewController: UIViewController {
             }
         }
         
+    }
+    
+    func presentEndScene() {
+        ScoreLabel.isHidden = true
+        LivesLabel.isHidden = true
+        setScene(sceneName: "EndScene")
+    }
+    
+    func presentStartScene() {
+        ScoreLabel.isHidden = true
+        LivesLabel.isHidden = true
+        setScene(sceneName: "StartScene")
+    }
+    @IBAction func onStartButtonPressed(_ sender: UIButton) {
+        StartLabel.isHidden = true
+        StartButton.isHidden = true
+        
+        ScoreLabel.isHidden = false
+        LivesLabel.isHidden = false
+        
+        CollisionManager.gameViewController = self
+        ScoreManager.Score = 0
+        ScoreManager.Lives = 5
+        updateLivesLabel()
+        updateScoreLabel()
+        setScene(sceneName: "GameScene")
     }
 }
