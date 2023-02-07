@@ -16,6 +16,8 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var StartLabel: UILabel!
     @IBOutlet weak var StartButton: UIButton!
+    @IBOutlet weak var EndLabel: UILabel!
+    @IBOutlet weak var RestartButton: UIButton!
     var currentScene: GKScene?
     
     override func viewDidLoad() {
@@ -39,6 +41,7 @@ class GameViewController: UIViewController {
     }
     
     func updateLivesLabel(){
+        if(ScoreManager.Lives < 1 ){ presentEndScene() }
         LivesLabel?.text = "Lives: \(ScoreManager.Lives)"
     }
     
@@ -63,14 +66,27 @@ class GameViewController: UIViewController {
     }
     
     func presentEndScene() {
+        StartLabel.isHidden = true
+        StartButton.isHidden = true
+        
         ScoreLabel.isHidden = true
         LivesLabel.isHidden = true
+        
+        EndLabel.isHidden = false
+        RestartButton.isHidden = false
         setScene(sceneName: "EndScene")
     }
     
     func presentStartScene() {
+        
+        StartLabel.isHidden = false
+        StartButton.isHidden = false
+        
         ScoreLabel.isHidden = true
         LivesLabel.isHidden = true
+        
+        EndLabel.isHidden = true
+        RestartButton.isHidden = true
         setScene(sceneName: "StartScene")
     }
     @IBAction func onStartButtonPressed(_ sender: UIButton) {
@@ -80,11 +96,33 @@ class GameViewController: UIViewController {
         ScoreLabel.isHidden = false
         LivesLabel.isHidden = false
         
+        EndLabel.isHidden = true
+        RestartButton.isHidden = true
+            
         CollisionManager.gameViewController = self
         ScoreManager.Score = 0
         ScoreManager.Lives = 5
         updateLivesLabel()
         updateScoreLabel()
         setScene(sceneName: "GameScene")
+    }
+    @IBAction func onRestartButtonPressed(_ sender: UIButton) {
+        
+        StartLabel.isHidden = true
+        StartButton.isHidden = true
+        
+        ScoreLabel.isHidden = false
+        LivesLabel.isHidden = false
+        
+        EndLabel.isHidden = true
+        RestartButton.isHidden = true
+            
+        CollisionManager.gameViewController = self
+        ScoreManager.Score = 0
+        ScoreManager.Lives = 5
+        updateLivesLabel()
+        updateScoreLabel()
+        setScene(sceneName: "GameScene")
+        
     }
 }

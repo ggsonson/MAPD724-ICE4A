@@ -33,6 +33,15 @@
                                 <color key="textColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mail Pilot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jN-ao-x46">
+                                <rect key="frame" x="5" y="240" width="380" height="123"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="123" id="Qz6-Az-YVr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="64"/>
+                                <color key="textColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUT-Ri-ygO">
                                 <rect key="frame" x="142" y="411" width="107" height="59"/>
                                 <constraints>
@@ -47,33 +56,56 @@
                                     <action selector="onStartButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="cv4-Qe-zx0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mail Pilot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jN-ao-x46">
-                                <rect key="frame" x="5" y="240" width="380" height="123"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAMEOVER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7O-hA-xjo">
+                                <rect key="frame" x="5" y="217.66666666666663" width="380" height="123"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="123" id="Qz6-Az-YVr"/>
+                                    <constraint firstAttribute="height" constant="123" id="CLg-tv-yVY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="64"/>
                                 <color key="textColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="si3-cC-ecd">
+                                <rect key="frame" x="113" y="392.66666666666669" width="164" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="Igq-WP-pff"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Restart">
+                                    <fontDescription key="titleFontDescription" name="Dock51" family="Dock 51" pointSize="30"/>
+                                    <color key="baseForegroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onRestartButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="07D-9X-JJY"/>
+                                    <action selector="onStartButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="rQW-Mc-bv5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KUT-Ri-ygO" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="142" id="2HM-I4-oDB"/>
                             <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="9jN-ao-x46" secondAttribute="trailing" constant="5" id="4CB-qM-2el"/>
+                            <constraint firstItem="si3-cC-ecd" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" id="5wE-XE-QJw"/>
+                            <constraint firstItem="si3-cC-ecd" firstAttribute="centerX" secondItem="KUT-Ri-ygO" secondAttribute="centerX" id="Cb2-tM-hA7"/>
+                            <constraint firstItem="N7O-hA-xjo" firstAttribute="leading" secondItem="9jN-ao-x46" secondAttribute="leading" id="NLY-ds-ls5"/>
                             <constraint firstItem="XwT-GX-1wM" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="OTZ-7B-CHp"/>
                             <constraint firstItem="9jN-ao-x46" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="5" id="Oeb-Vg-q9O"/>
+                            <constraint firstItem="N7O-hA-xjo" firstAttribute="trailing" secondItem="9jN-ao-x46" secondAttribute="trailing" id="P5e-eK-hNf"/>
+                            <constraint firstItem="si3-cC-ecd" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="113" id="UDJ-fd-y6s"/>
                             <constraint firstItem="KUT-Ri-ygO" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="bYB-Dm-PDa"/>
                             <constraint firstItem="eGz-f5-c9d" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" id="dvG-lh-TUm"/>
                             <constraint firstItem="KUT-Ri-ygO" firstAttribute="top" secondItem="9jN-ao-x46" secondAttribute="bottom" constant="48" id="fQD-ED-6T1"/>
+                            <constraint firstItem="si3-cC-ecd" firstAttribute="top" secondItem="N7O-hA-xjo" secondAttribute="bottom" constant="52" id="hbw-2N-pcC"/>
                             <constraint firstItem="XwT-GX-1wM" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="6" id="k4i-Cx-xnD"/>
                             <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="KUT-Ri-ygO" secondAttribute="bottom" constant="340" id="ubo-Me-c3e"/>
                             <constraint firstItem="eGz-f5-c9d" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="5" id="zFM-ui-pRX"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="EndLabel" destination="N7O-hA-xjo" id="Dlk-1o-ZxF"/>
                         <outlet property="LivesLabel" destination="eGz-f5-c9d" id="tQK-9o-mw8"/>
+                        <outlet property="RestartButton" destination="si3-cC-ecd" id="QCy-i1-XL2"/>
                         <outlet property="ScoreLabel" destination="XwT-GX-1wM" id="J5P-1G-p2k"/>
                         <outlet property="StartButton" destination="KUT-Ri-ygO" id="NAf-CA-ZuI"/>
                         <outlet property="StartLabel" destination="9jN-ao-x46" id="2ls-wN-e8h"/>

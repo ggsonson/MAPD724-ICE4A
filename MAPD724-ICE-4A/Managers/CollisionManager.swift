@@ -35,6 +35,10 @@ class CollisionManager{
                         scene.run(SKAction.playSoundFileNamed("yay", waitForCompletion: false))
                         ScoreManager.Score += 100
                         gameViewController?.updateScoreLabel()
+                        if(ScoreManager.Score % 500 == 0){
+                            ScoreManager.Lives += 1
+                            gameViewController?.updateLivesLabel()
+                        }
                         break
                     case "cloud":
                         print("Collided with cloud")
